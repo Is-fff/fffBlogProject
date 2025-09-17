@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue2和Vue3的区别 | 吴炫境个人博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="代码学习记录">
+    
+    <link rel="preload" href="/fffBlog/assets/css/0.styles.a74e95d9.css" as="style"><link rel="preload" href="/fffBlog/assets/js/app.d2a984d9.js" as="script"><link rel="preload" href="/fffBlog/assets/js/2.92b40a62.js" as="script"><link rel="preload" href="/fffBlog/assets/js/1.40f520a9.js" as="script"><link rel="preload" href="/fffBlog/assets/js/25.44f5b516.js" as="script"><link rel="prefetch" href="/fffBlog/assets/js/10.0c61e136.js"><link rel="prefetch" href="/fffBlog/assets/js/11.2c20532d.js"><link rel="prefetch" href="/fffBlog/assets/js/12.c582b446.js"><link rel="prefetch" href="/fffBlog/assets/js/13.207a685b.js"><link rel="prefetch" href="/fffBlog/assets/js/14.1fdf4a2a.js"><link rel="prefetch" href="/fffBlog/assets/js/15.9fb4f1ad.js"><link rel="prefetch" href="/fffBlog/assets/js/16.7d3d2f6e.js"><link rel="prefetch" href="/fffBlog/assets/js/17.aba044a2.js"><link rel="prefetch" href="/fffBlog/assets/js/18.beba6154.js"><link rel="prefetch" href="/fffBlog/assets/js/19.e2e1f196.js"><link rel="prefetch" href="/fffBlog/assets/js/20.d016de69.js"><link rel="prefetch" href="/fffBlog/assets/js/21.bedebcf0.js"><link rel="prefetch" href="/fffBlog/assets/js/22.0942125b.js"><link rel="prefetch" href="/fffBlog/assets/js/23.2b2a8dca.js"><link rel="prefetch" href="/fffBlog/assets/js/24.9cea29ae.js"><link rel="prefetch" href="/fffBlog/assets/js/26.6a251a38.js"><link rel="prefetch" href="/fffBlog/assets/js/27.4655866b.js"><link rel="prefetch" href="/fffBlog/assets/js/28.6947a700.js"><link rel="prefetch" href="/fffBlog/assets/js/29.70adba3c.js"><link rel="prefetch" href="/fffBlog/assets/js/3.182c257f.js"><link rel="prefetch" href="/fffBlog/assets/js/30.f6a16e44.js"><link rel="prefetch" href="/fffBlog/assets/js/31.12de3ef6.js"><link rel="prefetch" href="/fffBlog/assets/js/32.db8f7374.js"><link rel="prefetch" href="/fffBlog/assets/js/33.e45d1bf9.js"><link rel="prefetch" href="/fffBlog/assets/js/34.cb1d6f49.js"><link rel="prefetch" href="/fffBlog/assets/js/35.aa159804.js"><link rel="prefetch" href="/fffBlog/assets/js/36.1695d44c.js"><link rel="prefetch" href="/fffBlog/assets/js/37.9a453e64.js"><link rel="prefetch" href="/fffBlog/assets/js/4.a29c46b6.js"><link rel="prefetch" href="/fffBlog/assets/js/5.e6661a5c.js"><link rel="prefetch" href="/fffBlog/assets/js/6.4c5bfda8.js"><link rel="prefetch" href="/fffBlog/assets/js/7.f22cdc7f.js"><link rel="prefetch" href="/fffBlog/assets/js/vendors~docsearch.11055bee.js">
+    <link rel="stylesheet" href="/fffBlog/assets/css/0.styles.a74e95d9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fffBlog/" class="home-link router-link-active"><!----> <span class="site-name">吴炫境个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fffBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/html.html" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/Js.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/css.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ES6.html" class="nav-link">
+  ES6新特性
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ts.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/something.html" class="nav-link">
+  杂记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/index.html" class="nav-link">
+  框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/vue.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react.html" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="构建工具" class="mobile-dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/toolPage/webpack.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/fffBlog/browserPage/browser.html" class="nav-link">
+  浏览器相关
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机系统" class="dropdown-title"><span class="title">计算机系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机系统" class="mobile-dropdown-title"><span class="title">计算机系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/cnt.html" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/algorithm.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/dataStructure.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fffBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/html.html" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/Js.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/css.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ES6.html" class="nav-link">
+  ES6新特性
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ts.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/something.html" class="nav-link">
+  杂记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/index.html" class="nav-link">
+  框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/vue.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react.html" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="构建工具" class="mobile-dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/toolPage/webpack.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/fffBlog/browserPage/browser.html" class="nav-link">
+  浏览器相关
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机系统" class="dropdown-title"><span class="title">计算机系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机系统" class="mobile-dropdown-title"><span class="title">计算机系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/cnt.html" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/algorithm.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/dataStructure.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue2和Vue3的区别</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fffBlog/FrameworkPage/vue.html#vue2和vue3的区别" class="sidebar-link">Vue2和Vue3的区别</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#响应式的区别" class="sidebar-link">响应式的区别</a></li></ul></li><li><a href="/fffBlog/FrameworkPage/vue.html#diff算法" class="sidebar-link">Diff算法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#运行时机" class="sidebar-link">运行时机</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#比对原则" class="sidebar-link">比对原则</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#比对过程" class="sidebar-link">比对过程</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#子节点比对-子节点数组" class="sidebar-link">子节点比对（子节点数组）</a></li></ul></li><li><a href="/fffBlog/FrameworkPage/vue.html#生命周期钩子-vue2与vue3" class="sidebar-link">生命周期钩子（Vue2与Vue3）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#vue2" class="sidebar-link">Vue2</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#vue3" class="sidebar-link">Vue3</a></li></ul></li><li><a href="/fffBlog/FrameworkPage/vue.html#父子组件生命周期" class="sidebar-link">父子组件生命周期</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/fffBlog/FrameworkPage/vue.html#订阅发布模式和观察者模式" class="sidebar-link">订阅发布模式和观察者模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#订阅发布模式" class="sidebar-link">订阅发布模式</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#观察者模式" class="sidebar-link">观察者模式</a></li></ul></li><li><a href="/fffBlog/FrameworkPage/vue.html#vue-nexttick" class="sidebar-link">Vue.nextTick</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#作用" class="sidebar-link">作用</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#应用场景" class="sidebar-link">应用场景</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#实现原理" class="sidebar-link">实现原理</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#vue2中响应式数据改变-发生了什么" class="sidebar-link">Vue2中响应式数据改变，发生了什么</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/vue.html#代码输出案例" class="sidebar-link">代码输出案例</a></li></ul></li><li><a href="/fffBlog/FrameworkPage/vue.html#为什么推荐使用ref而不用reactive" class="sidebar-link">为什么推荐使用ref而不用reactive</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="vue2和vue3的区别"><a href="#vue2和vue3的区别" class="header-anchor">#</a> Vue2和Vue3的区别</h2> <p><strong>渲染性能</strong>：Vue3相对于Vue2来说在渲染性能上有所提升。Vue3通过使用<strong>重写的响应系统和优化的虚拟DOM算法</strong>,提供了更快的渲染性能。</p> <p><strong>包体积</strong>：Vue3相对于Vue2来说在包体积上更小。Vue3采用了一些新的构建方式（Webpack）和<strong>Tree-Shaking技术</strong>,使得生成的包更小。这减少了加载时间并提高了性能。</p> <p><strong>Composition API</strong> :Vue3引入了**Composition API,**它是一种基于函数的API风格,允许开发者根据逻辑组织代码。Composition API提供了更好的代码复用和组织方式,使得组件更加可读、可维护。</p> <p><strong>TypeScript支持</strong>：Vue3对TypeScript的支持进一步改进,提供了更好的类型推断和错误检查。这使得使用TypeScript开发Vue应用程序更加流畅。Vue3基于Ts编写</p> <p><strong>响应式系统</strong>：Vue3的响应式系统经过了重写,提供了更好的性能和更丰富的功能。它支持了跨层级的响应式数据传递、自定义的响应式触发器和批量更新等特性。</p> <h3 id="响应式的区别"><a href="#响应式的区别" class="header-anchor">#</a> 响应式的区别</h3> <ul><li>Vue2响应式：基于Object.defineProperty()实现的。</li></ul> <p><strong>defineProperty实际上是对象里面基本方法之一，而proxy是针对整个对象所有基本方法的拦截器。这是最本质的区别！！！！</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//Vue2实现响应式</span>
+<span class="token keyword">let</span> v <span class="token operator">=</span> obj<span class="token punctuation">.</span>a <span class="token comment">// 拿到原始值</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function">get</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 读的时候 运行get</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'读取'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> v
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">set</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 赋值的时候，运行set</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>val <span class="token operator">!==</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'更改'</span><span class="token punctuation">)</span>
+            v <span class="token operator">=</span> val
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>在vue2里面观察的方式就是深度遍历每一个属性，把每一个<strong>属性的读取和赋值变成函数</strong>，只要变成函数，就可以插一脚。</p> <p><strong>缺陷</strong>：由于它是针对每个属性的监听，所以他就必须要进行深度的遍历，这会有效率的损失。</p> <p><img src="/fffBlog/assets/img/vue2defect.40745c0d.png" alt="img"></p> <ul><li>Vue3响应式：基于Proxy实现的。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//Vue3代理实现响应式</span>
+<span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">c</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 观察</span>
+<span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+	<span class="token function">get</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 读的时候 运行get</span>
+		<span class="token keyword">let</span> v <span class="token operator">=</span> target<span class="token punctuation">[</span>k<span class="token punctuation">]</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'k'</span><span class="token punctuation">,</span> <span class="token string">'读取'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> v
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">set</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> k<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 赋值的时候，运行set</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">!==</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'k'</span><span class="token punctuation">,</span> <span class="token string">'更改'</span><span class="token punctuation">)</span>
+            target<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> val
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">deleteProperty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment">// 删除属性监听</span>
+	
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+proxy<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">3</span>
+proxy<span class="token punctuation">.</span>b
+proxy<span class="token punctuation">.</span>ccccccccc
+
+</code></pre></div><p>// 总结： 深度监听，性能更好
+// 可以监听 新增/删除 属性
+// 可监听数组变化</p> <p>// 能规避Object.definePropety的问题
+// 缺陷： 无法兼容所有的浏览器，无法polyfill</p> <h2 id="diff算法"><a href="#diff算法" class="header-anchor">#</a> Diff算法</h2> <h3 id="运行时机"><a href="#运行时机" class="header-anchor">#</a> 运行时机</h3> <p>当我们当前组件所依赖的数值<strong>更新和组件创建</strong>时运行<strong>update</strong>函数，update函数会调用组件的<strong>render</strong>函数，render生成<strong>新的虚拟dom树</strong>，update的到新虚拟dom树的根节点，然后进入update函数内部，将_vnode也就是旧虚拟dom树替换成新的虚拟dom树，然后用一个变量将旧虚拟dom树保存起来，接下来<strong>调用patch函数进行diff比对</strong>。</p> <h3 id="比对原则"><a href="#比对原则" class="header-anchor">#</a> 比对原则</h3> <p><strong>深度优先，同层比较</strong></p> <ol><li>尽量不动</li> <li>能修改属性修改属性</li> <li>能移动dom移动dom</li> <li>实在不行再删除或新增真实dom</li></ol> <h3 id="比对过程"><a href="#比对过程" class="header-anchor">#</a> 比对过程</h3> <ol><li>对比tag，标签名</li> <li>对比key（若存在）</li> <li>对比其它属性</li></ol> <h3 id="子节点比对-子节点数组"><a href="#子节点比对-子节点数组" class="header-anchor">#</a> 子节点比对（子节点数组）</h3> <p>采用双指针遍历对比，首尾指针，依次以</p> <p>头头-&gt;头尾-&gt;尾头-&gt;尾尾 比较</p> <p>当start&gt;end，则比对完毕</p> <h2 id="生命周期钩子-vue2与vue3"><a href="#生命周期钩子-vue2与vue3" class="header-anchor">#</a> 生命周期钩子（Vue2与Vue3）</h2> <h3 id="vue2"><a href="#vue2" class="header-anchor">#</a> Vue2</h3> <p>beforeCreate</p> <p>created</p> <p>beforeMount</p> <p>mounted</p> <p>beforeUpdate</p> <p>updated</p> <p>beforeUnMounted</p> <p>unMounted</p> <p>beforeDestroy</p> <p>destroyd</p> <h3 id="vue3"><a href="#vue3" class="header-anchor">#</a> Vue3</h3> <p>setup()//去掉beforeCreate和created,代替created</p> <p>onBeforeMounted()</p> <p>onMounted()</p> <p>onBeforeUpdate()</p> <p>onUpdated()</p> <p>onBeforeUnmount()</p> <p>onUnmounted()</p> <p>//去掉了created和destroy</p> <h2 id="父子组件生命周期"><a href="#父子组件生命周期" class="header-anchor">#</a> 父子组件生命周期</h2> <p>父beforeCreate -&gt; 父created -&gt; 父beforeMount -&gt; 子beforeCreate -&gt; 子created -&gt; 子beforeMount -&gt; 子mounted -&gt; 父mounted-&gt;父beforeUpdate-&gt;子beforeUpdate-&gt;子updated-&gt;父updated-&gt;父beforeDestroy-&gt;子beforeDestroy-&gt;子destroyed-&gt;父destroyed
+即：父组件可以单独被create,在挂载前才会去看是否有子组件，其它生命周期则从内向外更新。</p> <h2 id="订阅发布模式和观察者模式"><a href="#订阅发布模式和观察者模式" class="header-anchor">#</a> 订阅发布模式和观察者模式</h2> <h3 id="订阅发布模式"><a href="#订阅发布模式" class="header-anchor">#</a> 订阅发布模式</h3> <p>完成订阅发布流程需要三个角色：<strong>订阅者，发布者，发布中心</strong></p> <p>流程：订阅者需要向事件中心订阅指定的事件 -&gt; 发布者向事件中心发布指定事件内容 -&gt; 事件中心通知订阅者 -&gt; 订阅者收到消息</p> <p>代码实现，可以参考eventEmiter</p> <p>常见场景：事件处理机制</p> <p><strong>特点</strong>：发布者和订阅者只关注事件本身，通过事件中心订阅/发布，不关注是谁发布/订阅，两者之间是<strong>解耦</strong>的</p> <p><strong>优点</strong>：发布者订阅者互相解耦，更加灵活</p> <p><strong>缺点</strong>：1.使用不当容易造成数据流混乱；2.需要维护事件队列，性能消耗大</p> <h3 id="观察者模式"><a href="#观察者模式" class="header-anchor">#</a> 观察者模式</h3> <p>完成观察者模式需要两个角色：<strong>被观察者，观察者</strong></p> <p><strong>观察者模式</strong>定义了一种一对多的依赖关系，让多个<strong>观察者</strong>对象同时监听某一个目标对象，当这个目标对象的状态发生变化时，会通知所有<strong>观察者</strong>对象，使它们能够自动更新。</p> <p>常见场景：vue2响应式，mobx响应式</p> <p>代码实现(vue2响应式实现)</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 观察监听一个对象成员的变化
+ * @param {Object} obj 观察的对象
+ * @param {String} targetVariable 观察的对象成员
+ * @param {Function} callback 目标变化触发的回调
+ */</span>
+<span class="token keyword">function</span> <span class="token function">observer</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> targetVariable<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>obj<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    obj<span class="token punctuation">.</span>data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> targetVariable<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>targetVariable<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">set</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//状态改变</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">[</span>targetVariable<span class="token punctuation">]</span> <span class="token operator">=</span> val
+      <span class="token comment">// 目标主动通知观察者</span>
+      callback <span class="token operator">&amp;&amp;</span> <span class="token function">callback</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>obj<span class="token punctuation">.</span>data<span class="token punctuation">[</span>targetVariable<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    callback <span class="token operator">&amp;&amp;</span> <span class="token function">callback</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>data<span class="token punctuation">[</span>targetVariable<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>特点</strong>：观察者和被观察者是直接关联的，是耦合的</p> <p><strong>优点</strong>：便于实现响应式，目标资源的改变会通知使用者</p> <p><strong>缺点</strong>：两者相互耦合，使得这种方式不够灵活</p> <h2 id="vue-nexttick"><a href="#vue-nexttick" class="header-anchor">#</a> Vue.nextTick</h2> <h3 id="作用"><a href="#作用" class="header-anchor">#</a> 作用</h3> <p>在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。</p> <h3 id="应用场景"><a href="#应用场景" class="header-anchor">#</a> 应用场景</h3> <p>列表数据更新之后，获取列表组件的高度</p> <h3 id="实现原理"><a href="#实现原理" class="header-anchor">#</a> 实现原理</h3> <p>nextTick内部动态维护一个<strong>callbacks数组</strong>，并将这个回调数组放到异步队列里面依次执行，根据不同的浏览器支持，异步的实现方式Promise.then &gt; MutationObserver &gt; setImmediate &gt; setTimeout。</p> <p>因此在标准浏览器中，nextTick通过Promise.resolve().then将回调数组放到微任务队列中执行</p> <h3 id="vue2中响应式数据改变-发生了什么"><a href="#vue2中响应式数据改变-发生了什么" class="header-anchor">#</a> Vue2中响应式数据改变，发生了什么</h3> <p>this.a = 2,触发了setter方法，通过dep.notify()，通知watcher更新视图，调用watcher.update()，采用queueWatcher去重，并将watcher.run放入nextTick**（nextTick(watcher.run)）**</p> <h3 id="代码输出案例"><a href="#代码输出案例" class="header-anchor">#</a> 代码输出案例</h3> <p><img src="img/outputTest.png" alt="img"></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//2</span>
+<span class="token comment">//nextTick 1</span>
+<span class="token comment">//resolve 2</span>
+</code></pre></div><p>第四行执行nextTick，将回调放置在callbacks数组并置入微任务队列，此时微队列：[...callbacks]</p> <p>第七行将Promise回调置入微队列，此时微队列：[...callbacks,()=&gt;{console.log(resolve)}]</p> <p>第十行修改a，执行watcher.update，将watcher.run放入nextTick的callbacks</p> <p>此时callbacks = [()=&gt;{console.log(nextTick)},watcher.run]</p> <p>微任务队列：[...callback,()=&gt;{console.log(resolve)}]</p> <h2 id="为什么推荐使用ref而不用reactive"><a href="#为什么推荐使用ref而不用reactive" class="header-anchor">#</a> 为什么推荐使用ref而不用reactive</h2> <p>1.reative只支持引用类型，而ref支持基本数据类型和引用类型，引用类型内部也是用reactive实现</p> <p>2。<strong>重新分配新对象时，由于reactive返回的是Proxy对象引用，因此重新赋值对象会导致响应式丢失，而对ref.value重新赋值不会失去响应式</strong></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/fffBlog/assets/js/app.d2a984d9.js" defer></script><script src="/fffBlog/assets/js/2.92b40a62.js" defer></script><script src="/fffBlog/assets/js/1.40f520a9.js" defer></script><script src="/fffBlog/assets/js/25.44f5b516.js" defer></script>
+  </body>
+</html>

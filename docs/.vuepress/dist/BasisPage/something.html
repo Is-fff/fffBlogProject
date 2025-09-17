@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nextTick() | 吴炫境个人博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="代码学习记录">
+    
+    <link rel="preload" href="/fffBlog/assets/css/0.styles.a74e95d9.css" as="style"><link rel="preload" href="/fffBlog/assets/js/app.d2a984d9.js" as="script"><link rel="preload" href="/fffBlog/assets/js/2.92b40a62.js" as="script"><link rel="preload" href="/fffBlog/assets/js/1.40f520a9.js" as="script"><link rel="preload" href="/fffBlog/assets/js/30.f6a16e44.js" as="script"><link rel="prefetch" href="/fffBlog/assets/js/10.0c61e136.js"><link rel="prefetch" href="/fffBlog/assets/js/11.2c20532d.js"><link rel="prefetch" href="/fffBlog/assets/js/12.c582b446.js"><link rel="prefetch" href="/fffBlog/assets/js/13.207a685b.js"><link rel="prefetch" href="/fffBlog/assets/js/14.1fdf4a2a.js"><link rel="prefetch" href="/fffBlog/assets/js/15.9fb4f1ad.js"><link rel="prefetch" href="/fffBlog/assets/js/16.7d3d2f6e.js"><link rel="prefetch" href="/fffBlog/assets/js/17.aba044a2.js"><link rel="prefetch" href="/fffBlog/assets/js/18.beba6154.js"><link rel="prefetch" href="/fffBlog/assets/js/19.e2e1f196.js"><link rel="prefetch" href="/fffBlog/assets/js/20.d016de69.js"><link rel="prefetch" href="/fffBlog/assets/js/21.bedebcf0.js"><link rel="prefetch" href="/fffBlog/assets/js/22.0942125b.js"><link rel="prefetch" href="/fffBlog/assets/js/23.2b2a8dca.js"><link rel="prefetch" href="/fffBlog/assets/js/24.9cea29ae.js"><link rel="prefetch" href="/fffBlog/assets/js/25.44f5b516.js"><link rel="prefetch" href="/fffBlog/assets/js/26.6a251a38.js"><link rel="prefetch" href="/fffBlog/assets/js/27.4655866b.js"><link rel="prefetch" href="/fffBlog/assets/js/28.6947a700.js"><link rel="prefetch" href="/fffBlog/assets/js/29.70adba3c.js"><link rel="prefetch" href="/fffBlog/assets/js/3.182c257f.js"><link rel="prefetch" href="/fffBlog/assets/js/31.12de3ef6.js"><link rel="prefetch" href="/fffBlog/assets/js/32.db8f7374.js"><link rel="prefetch" href="/fffBlog/assets/js/33.e45d1bf9.js"><link rel="prefetch" href="/fffBlog/assets/js/34.cb1d6f49.js"><link rel="prefetch" href="/fffBlog/assets/js/35.aa159804.js"><link rel="prefetch" href="/fffBlog/assets/js/36.1695d44c.js"><link rel="prefetch" href="/fffBlog/assets/js/37.9a453e64.js"><link rel="prefetch" href="/fffBlog/assets/js/4.a29c46b6.js"><link rel="prefetch" href="/fffBlog/assets/js/5.e6661a5c.js"><link rel="prefetch" href="/fffBlog/assets/js/6.4c5bfda8.js"><link rel="prefetch" href="/fffBlog/assets/js/7.f22cdc7f.js"><link rel="prefetch" href="/fffBlog/assets/js/vendors~docsearch.11055bee.js">
+    <link rel="stylesheet" href="/fffBlog/assets/css/0.styles.a74e95d9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fffBlog/" class="home-link router-link-active"><!----> <span class="site-name">吴炫境个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fffBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/html.html" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/Js.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/css.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ES6.html" class="nav-link">
+  ES6新特性
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ts.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/something.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  杂记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/index.html" class="nav-link">
+  框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/vue.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react.html" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="构建工具" class="mobile-dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/toolPage/webpack.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/fffBlog/browserPage/browser.html" class="nav-link">
+  浏览器相关
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机系统" class="dropdown-title"><span class="title">计算机系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机系统" class="mobile-dropdown-title"><span class="title">计算机系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/cnt.html" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/algorithm.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/dataStructure.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fffBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/html.html" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/Js.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/css.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ES6.html" class="nav-link">
+  ES6新特性
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ts.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/something.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  杂记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/index.html" class="nav-link">
+  框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/vue.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react.html" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="构建工具" class="mobile-dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/toolPage/webpack.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/fffBlog/browserPage/browser.html" class="nav-link">
+  浏览器相关
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机系统" class="dropdown-title"><span class="title">计算机系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机系统" class="mobile-dropdown-title"><span class="title">计算机系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/cnt.html" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/algorithm.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/dataStructure.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>nextTick()</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fffBlog/BasisPage/something.html#nexttick" class="sidebar-link">nextTick()</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#vue环境" class="sidebar-link">Vue环境</a></li><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#nodejs环境" class="sidebar-link">Nodejs环境</a></li></ul></li><li><a href="/fffBlog/BasisPage/something.html#nexttick在nodejs环境不同模块中的执行时机" class="sidebar-link">nextTick在Nodejs环境不同模块中的执行时机</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#es6-模块和-commonjs-模块有很大的差异。" class="sidebar-link">ES6 模块和 CommonJS 模块有很大的差异。</a></li></ul></li><li><a href="/fffBlog/BasisPage/something.html#取消网络请求" class="sidebar-link">取消网络请求</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#原生fetch" class="sidebar-link">原生fetch</a></li><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#axios" class="sidebar-link">axios</a></li></ul></li><li><a href="/fffBlog/BasisPage/something.html#对函数式编程的理解" class="sidebar-link">对函数式编程的理解</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#纯函数" class="sidebar-link">纯函数</a></li><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#不可变性" class="sidebar-link">不可变性</a></li><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#高阶函数-函数柯里化" class="sidebar-link">高阶函数，函数柯里化</a></li><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#优点" class="sidebar-link">优点</a></li><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/something.html#缺点" class="sidebar-link">缺点</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="nexttick"><a href="#nexttick" class="header-anchor">#</a> nextTick()</h2> <h3 id="vue环境"><a href="#vue环境" class="header-anchor">#</a> Vue环境</h3> <p>是一个vue框架定义的API,作用是在下次 DOM 更新循环结束之后执行延迟回调，开发者可以在这个时候获取最新渲染的视图</p> <h3 id="nodejs环境"><a href="#nodejs环境" class="header-anchor">#</a> Nodejs环境</h3> <p>node 中的 nextTick 是 node 自带全局的变量 process 的一个方法，<strong>process.nextTick 是一个微任务，在 node 的所有微任务中最先执行，是优先级最高的微任务</strong>。浏览器中是没有这一个方法的。</p> <p>这对于需要高性能、低延迟的场景非常有用，例如在某些异步操作完成后立即执行清理工作或状态更新。</p> <p><strong>使用场景</strong>
+异步操作前的准备工作：在开始一个耗时的异步操作之前，进行一些轻量级的初始化或验证工作。
+递归异步操作中的回调控制：避免递归调用中的栈溢出问题。
+状态同步：在事件循环的当前阶段结束后，但不希望阻塞其他宏任务的情况下，更新内部状态。
+资源释放：在异步操作结束时立即执行资源释放逻辑。</p> <h2 id="nexttick在nodejs环境不同模块中的执行时机"><a href="#nexttick在nodejs环境不同模块中的执行时机" class="header-anchor">#</a> nextTick在Nodejs环境不同模块中的执行时机</h2> <p>nodejs模块化分为两种模块，一种是 <strong>ES6 模块</strong>，简称 <strong>ESM</strong>；另一种是 Node.js 专用的 CommonJS 模块，简称 <strong>CJS</strong>。这两种模块<strong>不兼容。</strong></p> <h3 id="es6-模块和-commonjs-模块有很大的差异。"><a href="#es6-模块和-commonjs-模块有很大的差异。" class="header-anchor">#</a> ES6 模块和 CommonJS 模块有很大的差异。</h3> <p><strong>语法上面</strong>，CommonJS 模块使用<code>require()</code>加载和<code>module.exports</code>输出，ES6 模块使用<code>import</code>和<code>export</code>。</p> <p><strong>用法上面</strong>，<strong><code>require()</code>是同步加载</strong>，后面的代码必须等待这个命令执行完，才会执行。<strong><code>import</code>命令则是异步加载</strong>，或者更准确地说，ES6 模块有一个独立的静态解析阶段，依赖关系的分析是在那个阶段完成的，最底层的模块第一个执行。</p> <p><strong>重点来了</strong></p> <p>由于commonjs加载模块时是同步加载，因此nextTick代码可以被优先执行，在当前其它所有微任务之前执行（事件循环）</p> <p>而ES6加载模块采用的是异步加载，采用的是async await模式加载模块，本身就可以看成一个微任务，所以nextTick会延迟到当前代码执行后再执行。</p> <h2 id="取消网络请求"><a href="#取消网络请求" class="header-anchor">#</a> 取消网络请求</h2> <h3 id="原生fetch"><a href="#原生fetch" class="header-anchor">#</a> 原生fetch</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> controller <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AbortController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//新建AbortController</span>
+<span class="token keyword">const</span> signal <span class="token operator">=</span> controller<span class="token punctuation">.</span>signal<span class="token punctuation">;</span><span class="token comment">//获得标识符</span>
+ 
+<span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span> signal <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token comment">//暂停signal标记的请求</span>
+controller<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="axios"><a href="#axios" class="header-anchor">#</a> axios</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> source <span class="token operator">=</span> axios<span class="token punctuation">.</span>CancelToken<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/api/data'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">cancelToken</span><span class="token operator">:</span> source<span class="token punctuation">.</span>token
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">response</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 请求成功处理</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">error</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 错误处理</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token comment">// 在需要的时候取消请求</span>
+source<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token string">'请求取消的原因'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="对函数式编程的理解"><a href="#对函数式编程的理解" class="header-anchor">#</a> 对函数式编程的理解</h2> <p>函数式编程是一种基于数学函数计算的<strong>编程范式</strong>。它强调使用<strong>纯函数</strong>、<strong>不可变性</strong>和<strong>高阶函数</strong>来解决问题。</p> <h3 id="纯函数"><a href="#纯函数" class="header-anchor">#</a> 纯函数</h3> <p>没有任何副作用，相同的输入获得相同的输出（易于测试）</p> <h3 id="不可变性"><a href="#不可变性" class="header-anchor">#</a> 不可变性</h3> <p>在创建数据结构后，不可对其进行修改</p> <h3 id="高阶函数-函数柯里化"><a href="#高阶函数-函数柯里化" class="header-anchor">#</a> 高阶函数，函数柯里化</h3> <p>一个函数的参数/返回值也是一个函数</p> <h3 id="优点"><a href="#优点" class="header-anchor">#</a> 优点</h3> <p>可复用性，易于测试，易于维护，更优雅的函数组合，更加简洁</p> <h3 id="缺点"><a href="#缺点" class="header-anchor">#</a> 缺点</h3> <p>错误使用闭包导致内存泄漏，递归性能问题</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/fffBlog/assets/js/app.d2a984d9.js" defer></script><script src="/fffBlog/assets/js/2.92b40a62.js" defer></script><script src="/fffBlog/assets/js/1.40f520a9.js" defer></script><script src="/fffBlog/assets/js/30.f6a16e44.js" defer></script>
+  </body>
+</html>

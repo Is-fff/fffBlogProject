@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>type和interface的区别 | 吴炫境个人博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="代码学习记录">
+    
+    <link rel="preload" href="/fffBlog/assets/css/0.styles.a74e95d9.css" as="style"><link rel="preload" href="/fffBlog/assets/js/app.d2a984d9.js" as="script"><link rel="preload" href="/fffBlog/assets/js/2.92b40a62.js" as="script"><link rel="preload" href="/fffBlog/assets/js/1.40f520a9.js" as="script"><link rel="preload" href="/fffBlog/assets/js/31.12de3ef6.js" as="script"><link rel="prefetch" href="/fffBlog/assets/js/10.0c61e136.js"><link rel="prefetch" href="/fffBlog/assets/js/11.2c20532d.js"><link rel="prefetch" href="/fffBlog/assets/js/12.c582b446.js"><link rel="prefetch" href="/fffBlog/assets/js/13.207a685b.js"><link rel="prefetch" href="/fffBlog/assets/js/14.1fdf4a2a.js"><link rel="prefetch" href="/fffBlog/assets/js/15.9fb4f1ad.js"><link rel="prefetch" href="/fffBlog/assets/js/16.7d3d2f6e.js"><link rel="prefetch" href="/fffBlog/assets/js/17.aba044a2.js"><link rel="prefetch" href="/fffBlog/assets/js/18.beba6154.js"><link rel="prefetch" href="/fffBlog/assets/js/19.e2e1f196.js"><link rel="prefetch" href="/fffBlog/assets/js/20.d016de69.js"><link rel="prefetch" href="/fffBlog/assets/js/21.bedebcf0.js"><link rel="prefetch" href="/fffBlog/assets/js/22.0942125b.js"><link rel="prefetch" href="/fffBlog/assets/js/23.2b2a8dca.js"><link rel="prefetch" href="/fffBlog/assets/js/24.9cea29ae.js"><link rel="prefetch" href="/fffBlog/assets/js/25.44f5b516.js"><link rel="prefetch" href="/fffBlog/assets/js/26.6a251a38.js"><link rel="prefetch" href="/fffBlog/assets/js/27.4655866b.js"><link rel="prefetch" href="/fffBlog/assets/js/28.6947a700.js"><link rel="prefetch" href="/fffBlog/assets/js/29.70adba3c.js"><link rel="prefetch" href="/fffBlog/assets/js/3.182c257f.js"><link rel="prefetch" href="/fffBlog/assets/js/30.f6a16e44.js"><link rel="prefetch" href="/fffBlog/assets/js/32.db8f7374.js"><link rel="prefetch" href="/fffBlog/assets/js/33.e45d1bf9.js"><link rel="prefetch" href="/fffBlog/assets/js/34.cb1d6f49.js"><link rel="prefetch" href="/fffBlog/assets/js/35.aa159804.js"><link rel="prefetch" href="/fffBlog/assets/js/36.1695d44c.js"><link rel="prefetch" href="/fffBlog/assets/js/37.9a453e64.js"><link rel="prefetch" href="/fffBlog/assets/js/4.a29c46b6.js"><link rel="prefetch" href="/fffBlog/assets/js/5.e6661a5c.js"><link rel="prefetch" href="/fffBlog/assets/js/6.4c5bfda8.js"><link rel="prefetch" href="/fffBlog/assets/js/7.f22cdc7f.js"><link rel="prefetch" href="/fffBlog/assets/js/vendors~docsearch.11055bee.js">
+    <link rel="stylesheet" href="/fffBlog/assets/css/0.styles.a74e95d9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fffBlog/" class="home-link router-link-active"><!----> <span class="site-name">吴炫境个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fffBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/html.html" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/Js.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/css.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ES6.html" class="nav-link">
+  ES6新特性
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ts.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/something.html" class="nav-link">
+  杂记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/index.html" class="nav-link">
+  框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/vue.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react.html" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="构建工具" class="mobile-dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/toolPage/webpack.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/fffBlog/browserPage/browser.html" class="nav-link">
+  浏览器相关
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机系统" class="dropdown-title"><span class="title">计算机系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机系统" class="mobile-dropdown-title"><span class="title">计算机系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/cnt.html" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/algorithm.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/dataStructure.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fffBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/html.html" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/Js.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/css.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ES6.html" class="nav-link">
+  ES6新特性
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ts.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/something.html" class="nav-link">
+  杂记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端框架" class="dropdown-title"><span class="title">前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端框架" class="mobile-dropdown-title"><span class="title">前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/index.html" class="nav-link">
+  框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/vue.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react.html" class="nav-link">
+  React
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="构建工具" class="mobile-dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/toolPage/webpack.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/fffBlog/browserPage/browser.html" class="nav-link">
+  浏览器相关
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机系统" class="dropdown-title"><span class="title">计算机系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机系统" class="mobile-dropdown-title"><span class="title">计算机系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/cnt.html" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/algorithm.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/dataStructure.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>type和interface的区别</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fffBlog/BasisPage/ts.html#type和interface的区别" class="sidebar-link">type和interface的区别</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/ts.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/fffBlog/BasisPage/ts.html#any、unknown、never的区别" class="sidebar-link">any、unknown、never的区别</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/ts.html#any" class="sidebar-link">any</a></li><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/ts.html#unknown" class="sidebar-link">unknown</a></li><li class="sidebar-sub-header"><a href="/fffBlog/BasisPage/ts.html#never" class="sidebar-link">never</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="type和interface的区别"><a href="#type和interface的区别" class="header-anchor">#</a> type和interface的区别</h2> <p><strong>type</strong>:类型别名，用来给一个类型起新名字，使用 type 创建类型别名。<strong>类型别名不仅可以用来表示基本类型，还可以用来表示对象类型、联合类型、元组和交集。</strong></p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">userName</span> <span class="token operator">=</span> <span class="token builtin">string</span><span class="token punctuation">;</span><span class="token comment">//可以用在基本数据类型</span>
+<span class="token keyword">type</span> <span class="token class-name">userMsg</span> <span class="token operator">=</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token builtin">number</span><span class="token punctuation">;</span><span class="token comment">//可以用在联合类型</span>
+<span class="token keyword">type</span> <span class="token class-name">Data</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//可以用在元组</span>
+<span class="token keyword">type</span> <span class="token class-name">myType</span> <span class="token operator">=</span> <span class="token keyword">typeof</span> someObj<span class="token punctuation">;</span><span class="token comment">//可以使用typeof定义</span>
+<span class="token keyword">type</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+	name<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>interface</strong>:接口，<strong>命名数据结构</strong>（例如对象）的另一种方式；与 type 不同，interface 仅限于描述对象类型。接口的声明语法也不同于类型别名的声明语法。</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">//interface 可以声明合并。</span>
+<span class="token keyword">interface</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+	name<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+	age<span class="token operator">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//实际test</span>
+<span class="token keyword">interface</span> <span class="token class-name">test</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token builtin">string</span>
+	age<span class="token operator">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>多次声明同名接口，ts会做声明合并</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> age<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">}</span>
+<span class="token keyword">let</span> user<span class="token operator">:</span> Person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">&quot;Tolu&quot;</span><span class="token punctuation">,</span>
+    age<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>而使用type，则会报错</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>  
+<span class="token comment">// Error: 标识符“Person”重复。ts(2300)</span>
+<span class="token keyword">type</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span> age<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">}</span>
+</code></pre></div><h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <p>1.type允许重命名基本类型，对象，元组，联合类型，而interface只允许定义对象类型</p> <p>2.interface会做声明合并，type同名报错</p> <p>3.都支持继承，对type的继承使用&amp;类型联合</p> <h2 id="any、unknown、never的区别"><a href="#any、unknown、never的区别" class="header-anchor">#</a> any、unknown、never的区别</h2> <h3 id="any"><a href="#any" class="header-anchor">#</a> any</h3> <p>any表示可以是任何类型，被any修饰的变量可以被赋予任何类型的值；同时，它也可以赋值给其它类型的变量，造成<strong>类型污染</strong></p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">let</span> a<span class="token operator">:</span><span class="token builtin">any</span> <span class="token operator">=</span> <span class="token string">&quot;abcd&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b<span class="token operator">:</span><span class="token builtin">number</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+b <span class="token operator">=</span> a<span class="token punctuation">;</span><span class="token comment">//不报错</span>
+</code></pre></div><h3 id="unknown"><a href="#unknown" class="header-anchor">#</a> unknown</h3> <p>unknown表示类型不确定，与any一样可以是任何类型，但是多了一些限制，可以说是升级版的any。unknown类型的变量可以被赋予任何类型的值，但<strong>unknown变量不允许赋值给其它类型的变量，避免了类型污染</strong></p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">let</span> v<span class="token operator">:</span> <span class="token builtin">unknown</span> <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> v1<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token operator">=</span> v<span class="token punctuation">;</span> <span class="token comment">// 报错</span>
+<span class="token keyword">let</span> v2<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=</span> v<span class="token punctuation">;</span> <span class="token comment">// 报错</span>
+</code></pre></div><p><code>unknown</code>类型变量能够进行的运算是有限的，只能进行比较运算（运算符<code>==</code>、<code>===</code>、<code>!=</code>、<code>!==</code>、<code>||</code>、<code>&amp;&amp;</code>、<code>?</code>）、取反运算（运算符<code>!</code>）、<code>typeof</code>运算符和<code>instanceof</code>运算符这几种，其他运算都会报错。</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">let</span> a<span class="token operator">:</span> <span class="token builtin">unknown</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 报错</span>
+a <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 正确</span>
+</code></pre></div><p>通过<strong>类型缩小</strong>来使用unknown变量</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">let</span> a<span class="token operator">:</span> <span class="token builtin">unknown</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> a <span class="token operator">===</span> <span class="token string">&quot;number&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> r <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment">// 正确</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="never"><a href="#never" class="header-anchor">#</a> never</h3> <p>表示不可能存在的值，表示ts类型中的空集，称为ts的底层类型</p> <p>可用于联合类型的剩余情况</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span>x<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> x <span class="token operator">===</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> x <span class="token operator">===</span> <span class="token string">&quot;number&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    x<span class="token punctuation">;</span> <span class="token comment">// never 类型</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>never类型可以赋值给任何变量</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">never</span> <span class="token punctuation">{</span>
+  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;Error&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> v1<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 不报错</span>
+<span class="token keyword">let</span> v2<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 不报错</span>
+<span class="token keyword">let</span> v3<span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token operator">=</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 不报错</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/fffBlog/assets/js/app.d2a984d9.js" defer></script><script src="/fffBlog/assets/js/2.92b40a62.js" defer></script><script src="/fffBlog/assets/js/1.40f520a9.js" defer></script><script src="/fffBlog/assets/js/31.12de3ef6.js" defer></script>
+  </body>
+</html>
