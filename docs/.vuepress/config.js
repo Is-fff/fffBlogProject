@@ -1,7 +1,7 @@
 module.exports = {
   base: "/fffBlog/",
   title: "吴炫境个人博客",
-  description: "代码学习记录",
+  description: "大前端开发学习记录",
   themeConfig: {// 主题设置
     nav: [// 导航栏
       {
@@ -37,7 +37,7 @@ module.exports = {
         ]
       },
       {
-        text: '前端框架',
+        text: 'Web前端框架',
         items:[
           {
             text: '框架概述',
@@ -77,6 +77,15 @@ module.exports = {
           },          {
             text: '数据结构',
             link: '/CNTPage/dataStructure'
+          }
+        ]
+      },
+      {
+        text: 'AI学习',
+        items:[
+          {
+            text: "AI工具链接",
+            link: '/AI_learn/aiTools'
           }
         ]
       }
