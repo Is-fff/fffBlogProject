@@ -43,11 +43,15 @@ module.exports = {
             text: '框架概述',
             link: '/FrameworkPage/index'
           },{
-            text: 'Vue',
+            text: 'Vue框架概述',
             link: '/FrameworkPage/vue'
           },{
-            text: 'React',
+            text: 'React框架概述',
             link: '/FrameworkPage/react'
+          },
+          {
+            text: 'React19新特性',
+            link: '/FrameworkPage/react19'
           }
         ]
       },
