@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React19新特性 | 吴炫境个人博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="大前端开发学习记录">
+    
+    <link rel="preload" href="/fffBlog/assets/css/0.styles.a74e95d9.css" as="style"><link rel="preload" href="/fffBlog/assets/js/app.3f27eb5b.js" as="script"><link rel="preload" href="/fffBlog/assets/js/2.92b40a62.js" as="script"><link rel="preload" href="/fffBlog/assets/js/1.40f520a9.js" as="script"><link rel="preload" href="/fffBlog/assets/js/37.bbec53e5.js" as="script"><link rel="prefetch" href="/fffBlog/assets/js/10.0c61e136.js"><link rel="prefetch" href="/fffBlog/assets/js/11.2c20532d.js"><link rel="prefetch" href="/fffBlog/assets/js/12.c582b446.js"><link rel="prefetch" href="/fffBlog/assets/js/13.207a685b.js"><link rel="prefetch" href="/fffBlog/assets/js/14.1fdf4a2a.js"><link rel="prefetch" href="/fffBlog/assets/js/15.9fb4f1ad.js"><link rel="prefetch" href="/fffBlog/assets/js/16.d8330097.js"><link rel="prefetch" href="/fffBlog/assets/js/17.aba044a2.js"><link rel="prefetch" href="/fffBlog/assets/js/18.beba6154.js"><link rel="prefetch" href="/fffBlog/assets/js/19.e2e1f196.js"><link rel="prefetch" href="/fffBlog/assets/js/20.d016de69.js"><link rel="prefetch" href="/fffBlog/assets/js/21.bedebcf0.js"><link rel="prefetch" href="/fffBlog/assets/js/22.0942125b.js"><link rel="prefetch" href="/fffBlog/assets/js/23.2b2a8dca.js"><link rel="prefetch" href="/fffBlog/assets/js/24.e5b9b9b1.js"><link rel="prefetch" href="/fffBlog/assets/js/25.a98913d0.js"><link rel="prefetch" href="/fffBlog/assets/js/26.8f2033c7.js"><link rel="prefetch" href="/fffBlog/assets/js/27.328d3b05.js"><link rel="prefetch" href="/fffBlog/assets/js/28.472651a3.js"><link rel="prefetch" href="/fffBlog/assets/js/29.a51e4fe3.js"><link rel="prefetch" href="/fffBlog/assets/js/3.182c257f.js"><link rel="prefetch" href="/fffBlog/assets/js/30.adb9d8d2.js"><link rel="prefetch" href="/fffBlog/assets/js/31.b98b9e8f.js"><link rel="prefetch" href="/fffBlog/assets/js/32.165b4b99.js"><link rel="prefetch" href="/fffBlog/assets/js/33.26286fd2.js"><link rel="prefetch" href="/fffBlog/assets/js/34.964a0870.js"><link rel="prefetch" href="/fffBlog/assets/js/35.2a7ce588.js"><link rel="prefetch" href="/fffBlog/assets/js/36.20400b5b.js"><link rel="prefetch" href="/fffBlog/assets/js/38.b6977341.js"><link rel="prefetch" href="/fffBlog/assets/js/39.96adc978.js"><link rel="prefetch" href="/fffBlog/assets/js/4.a29c46b6.js"><link rel="prefetch" href="/fffBlog/assets/js/5.e6661a5c.js"><link rel="prefetch" href="/fffBlog/assets/js/6.4c5bfda8.js"><link rel="prefetch" href="/fffBlog/assets/js/7.f22cdc7f.js"><link rel="prefetch" href="/fffBlog/assets/js/vendors~docsearch.11055bee.js">
+    <link rel="stylesheet" href="/fffBlog/assets/css/0.styles.a74e95d9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fffBlog/" class="home-link router-link-active"><!----> <span class="site-name">吴炫境个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fffBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/html.html" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/Js.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/css.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ES6.html" class="nav-link">
+  ES6新特性
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ts.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/something.html" class="nav-link">
+  杂记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端框架" class="dropdown-title"><span class="title">Web前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端框架" class="mobile-dropdown-title"><span class="title">Web前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/index.html" class="nav-link">
+  框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/vue.html" class="nav-link">
+  Vue框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react.html" class="nav-link">
+  React框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react19.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  React19新特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="构建工具" class="mobile-dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/toolPage/webpack.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/fffBlog/browserPage/browser.html" class="nav-link">
+  浏览器相关
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机系统" class="dropdown-title"><span class="title">计算机系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机系统" class="mobile-dropdown-title"><span class="title">计算机系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/cnt.html" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/algorithm.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/dataStructure.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AI学习" class="dropdown-title"><span class="title">AI学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="AI学习" class="mobile-dropdown-title"><span class="title">AI学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/AI_learn/aiTools.html" class="nav-link">
+  AI工具链接
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fffBlog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/html.html" class="nav-link">
+  HTML5
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/Js.html" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/css.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ES6.html" class="nav-link">
+  ES6新特性
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/ts.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/BasisPage/something.html" class="nav-link">
+  杂记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web前端框架" class="dropdown-title"><span class="title">Web前端框架</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web前端框架" class="mobile-dropdown-title"><span class="title">Web前端框架</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/index.html" class="nav-link">
+  框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/vue.html" class="nav-link">
+  Vue框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react.html" class="nav-link">
+  React框架概述
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/FrameworkPage/react19.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  React19新特性
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="构建工具" class="dropdown-title"><span class="title">构建工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="构建工具" class="mobile-dropdown-title"><span class="title">构建工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/toolPage/webpack.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/fffBlog/browserPage/browser.html" class="nav-link">
+  浏览器相关
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机系统" class="dropdown-title"><span class="title">计算机系统</span> <span class="arrow down"></span></button> <button type="button" aria-label="计算机系统" class="mobile-dropdown-title"><span class="title">计算机系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/cnt.html" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/algorithm.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/fffBlog/CNTPage/dataStructure.html" class="nav-link">
+  数据结构
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="AI学习" class="dropdown-title"><span class="title">AI学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="AI学习" class="mobile-dropdown-title"><span class="title">AI学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/fffBlog/AI_learn/aiTools.html" class="nav-link">
+  AI工具链接
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>React19新特性</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fffBlog/FrameworkPage/react19.html#并发渲染增强" class="sidebar-link">并发渲染增强</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/react19.html#usedeferredvalue" class="sidebar-link">useDeferredValue</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/react19.html#usetransition" class="sidebar-link">useTransition</a></li></ul></li><li><a href="/fffBlog/FrameworkPage/react19.html#新hook" class="sidebar-link">新hook</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/react19.html#useactionstate" class="sidebar-link">useActionState</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/react19.html#useoptimistic" class="sidebar-link">useOptimistic</a></li></ul></li><li><a href="/fffBlog/FrameworkPage/react19.html#新api" class="sidebar-link">新API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/react19.html#use" class="sidebar-link">use</a></li></ul></li><li><a href="/fffBlog/FrameworkPage/react19.html#其他改动" class="sidebar-link">其他改动</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/react19.html#ref" class="sidebar-link">ref</a></li><li class="sidebar-sub-header"><a href="/fffBlog/FrameworkPage/react19.html#context" class="sidebar-link">Context</a></li></ul></li><li><a href="/fffBlog/FrameworkPage/react19.html#参考文档" class="sidebar-link">参考文档</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react19新特性"><a href="#react19新特性" class="header-anchor">#</a> React19新特性</h1> <h2 id="并发渲染增强"><a href="#并发渲染增强" class="header-anchor">#</a> 并发渲染增强</h2> <h3 id="usedeferredvalue"><a href="#usedeferredvalue" class="header-anchor">#</a> useDeferredValue</h3> <p>用于延迟非关键值的更新，避免昂贵渲染阻塞主线程。</p> <p>useDeferredValue(value, initialValue?)</p> <p>value参数是一个state值，在初始渲染期间，返回的延迟值是initialValue或者你提供的值。在更新期间，React 首先尝试使用旧值重新渲染（因此返回旧值），然后在后台尝试使用新值重新渲染（因此返回更新后的值）。</p> <h3 id="usetransition"><a href="#usetransition" class="header-anchor">#</a> useTransition</h3> <p>标记本次状态更新为低优先级，不阻塞其他状态更新与渲染，并提供isPending状态控制loading状态UI。</p> <p>const [isPending, startTransition] = useTransition()</p> <p>startTransition通过传递一个action函数，启动过渡更新，当执行startTransition时isPending为true，执行完毕自动切换为false。</p> <h2 id="新hook"><a href="#新hook" class="header-anchor">#</a> 新hook</h2> <h3 id="useactionstate"><a href="#useactionstate" class="header-anchor">#</a> useActionState</h3> <p>可以根据某个表单动作的结果更新 state。</p> <p>const [state, formAction, isPending] = useActionState(fn, initialState, permalink?)</p> <p>在调用 useActionState 时在参数中传入现有的表单动作函数以及一个初始状态，无论 Action 是否在 pending 中，它都会返回一个新的 action 函数和一个 form state 以供在 form 中使用。这个新的 form state 也会作为参数传入提供的表单动作函数。</p> <p>调用的fn函数会接收到表单的上一个 state（初始值为传入的 initialState 参数，否则为上一次执行完该函数的结果）作为函数的第一个参数，余下参数为普通表单动作接到的参数。</p> <h3 id="useoptimistic"><a href="#useoptimistic" class="header-anchor">#</a> useOptimistic</h3> <p>const [optimisticState, addOptimistic] = useOptimistic(state, updateFn);</p> <p>允许你在进行异步操作时显示不同 state。它接受 state 作为参数，并返回该 state 的副本，在异步操作（如网络请求）期间可以不同。你需要提供一个函数，该函数接受当前 state 和操作的输入，并返回在操作挂起期间要使用的乐观状态。</p> <h2 id="新api"><a href="#新api" class="header-anchor">#</a> 新API</h2> <h3 id="use"><a href="#use" class="header-anchor">#</a> use</h3> <p>在渲染中读取资源，与Suspense结合使用，可以传递一个Promise，在组件渲染时暂停渲染，展示loading内容，知道Promise解析完成。</p> <h2 id="其他改动"><a href="#其他改动" class="header-anchor">#</a> 其他改动</h2> <h3 id="ref"><a href="#ref" class="header-anchor">#</a> ref</h3> <ol><li>在React19中，可以在函数组件中将ref作为prop进行访问，不再需要forwardRef。</li> <li>ref支持清理函数。</li></ol> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+  <span class="token attr-name">ref</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>ref<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ref 创建</span>
+
+    <span class="token comment">// 新特性: 当元素从 DOM 中被移除时</span>
+    <span class="token comment">// 返回一个清理函数来重置 ref</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ref cleanup</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><ol><li>移除了字符串ref，采用回调的形式</li></ol> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React</span><span class="token punctuation">.</span>Component <span class="token punctuation">{</span>
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>input<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">ref</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>input <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>input <span class="token operator">=</span> input<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//render() {</span>
+  <span class="token comment">//return &lt;input ref='input' /&gt;;</span>
+  <span class="token comment">//}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="context"><a href="#context" class="header-anchor">#</a> Context</h3> <p>可以将 <code>&lt;Context&gt;</code> 作为上下文提供者，无需使用 <code>&lt;Context.Provider&gt;</code></p> <h2 id="参考文档"><a href="#参考文档" class="header-anchor">#</a> 参考文档</h2> <p>https://juejin.cn/post/7457465059905880073</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/fffBlog/assets/js/app.3f27eb5b.js" defer></script><script src="/fffBlog/assets/js/2.92b40a62.js" defer></script><script src="/fffBlog/assets/js/1.40f520a9.js" defer></script><script src="/fffBlog/assets/js/37.bbec53e5.js" defer></script>
+  </body>
+</html>
