@@ -1,3 +1,5 @@
+
+
 ## nextTick() 
 
 ### Vue环境
@@ -31,4 +33,62 @@ nodejs模块化分为两种模块，一种是 **ES6 模块**，简称 **ESM**；
 由于commonjs加载模块时是同步加载，因此nextTick代码可以被优先执行，在当前其它所有微任务之前执行（事件循环）
 
 而ES6加载模块采用的是异步加载，采用的是async await模式加载模块，本身就可以看成一个微任务，所以nextTick会延迟到当前代码执行后再执行。
+
+## 取消网络请求
+
+### 原生fetch
+
+```js
+const controller = new AbortController();//新建AbortController
+const signal = controller.signal;//获得标识符
+ 
+fetch(url, { signal }).then(response => {
+}).catch(error => {
+    
+});
+ 
+//暂停signal标记的请求
+controller.abort();
+```
+
+### axios
+
+```js
+const source = axios.CancelToken.source();
+ 
+axios.get('/api/data', {
+  cancelToken: source.token
+}).then(response => {
+  // 请求成功处理
+}).catch(error => {
+  // 错误处理
+});
+ 
+// 在需要的时候取消请求
+source.cancel('请求取消的原因');
+```
+
+## 对函数式编程的理解
+
+函数式编程是一种基于数学函数计算的**编程范式**。它强调使用**纯函数**、**不可变性**和**高阶函数**来解决问题。
+
+### 纯函数
+
+没有任何副作用，相同的输入获得相同的输出（易于测试）
+
+### 不可变性
+
+在创建数据结构后，不可对其进行修改
+
+### 高阶函数，函数柯里化
+
+一个函数的参数/返回值也是一个函数
+
+### 优点
+
+可复用性，易于测试，易于维护，更优雅的函数组合，更加简洁
+
+### 缺点
+
+错误使用闭包导致内存泄漏，递归性能问题
 

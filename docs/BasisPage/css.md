@@ -12,7 +12,7 @@
 
 给父级元素添加以下任意样式
 
-body 根元素
+html 根元素
 
 浮动元素：float 除 none 以外的值
 
@@ -22,9 +22,35 @@ display 为 inline-block、table-cells、flex
 
 overflow 除了 visible 以外的值 (hidden、auto、scroll)
 
-BFC有什么作用
+### BFC有什么作用
+
+解决margin塌陷的问题
 
 解决当父级元素没有高度时，子级元素浮动会使父级元素高度塌陷的问题
+
+实现两栏布局
+
+```css
+.box1{
+    width:100px;
+    heigth:50px;
+    float:left;
+    /**给固定宽度的元素设置浮动**/
+}
+.box2{
+    height:50px;
+    overflow:hidden;/**自适应的盒子设置为BFC**/
+}
+```
+
+### 特点
+
+1.内部的盒子在垂直方向从上到下排列,盒子垂直方向的间距由margin决定
+
+2.BFC(空间)中的盒子依然会margin 重叠和穿透, 不同BFC则不会.
+
+3.BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此
+4.计算BFC的高度时，浮动元素的高度也参与计算
 
 ## css圆形和三角形
 
@@ -67,7 +93,7 @@ border-top: 100px solid transparent;
 **加载顺序**
 
     link引入的CSS文件会与HTML文档并行加载,不会阻塞HTML文档的解析。
-    @import引入的CSS文件会在CSS文件被加载完成后再下载,会阻塞HTML文档的解析。
+    @import引入的CSS文件会在页面加载完成后再下载。
 
 兼容性
 
@@ -154,3 +180,112 @@ div{
 4.mixin混入样式
 
 5.extends继承样式
+
+## 为什么要加-webkit-前缀
+
+这些前缀叫做浏览器私有前缀，由于各浏览器厂家大多都希望能够兼w3c标准，而制定css标准的过程是相对较慢的，当一些新属性开发出来之后，浏览器厂家在经过大量测试认为该属性可以投入使用时，此时w3c标准还未制定，浏览器厂家在发布该属性时就会加载内核私有前缀，避免日后标准制定完成时出现变更。因此，加私有前缀可以兼容旧版本浏览器的一些新属性使得css能够正常渲染
+
+### 常用前缀
+
+-moz- : Firefox
+-webkit- : Safari & Chrome
+-o- : Opera
+-khtml- : Konqueror
+-ms- : Internet Explorer
+-chrome- : Google Chrome专用前缀
+
+## CSS3新特性
+
+(1) 实现圆角（border-radius），阴影（box-shadow）；
+
+(2) 文字特效（text-shadow），线性渐变（gradient），旋转（transform）；
+
+(3) 增加了更多的CSS选择器；
+
+(4) 多重背景图片；
+
+(5) 媒体查询，多栏布局；
+
+(6) border-image：图片边框。
+
+## 水平垂直居中方案总结
+
+### flex布局
+
+```css
+.father {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: skyblue;
+}
+```
+
+### grid布局
+
+```css
+.father {
+        display: grid;
+        align-items:center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        background: skyblue;
+
+    }
+```
+### table布局
+
+```css
+.father {
+    display: table-cell;//表格布局
+    width: 200px;
+    height: 200px;
+    background: skyblue;
+    vertical-align: middle;//垂直居中
+    text-align: center;
+}
+.son {
+    display: inline-block;//行内块
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+```
+### 定位+（margin:auto/transform/margin:负值）
+
+```css
+.father {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: skyblue;
+}
+.son {
+    position: absolute;
+    /**margin负值**/
+    top: 50%;
+    left: 50%;
+    margin-left:-50px;
+    margin-top:-50px;
+    /**margin:auto**/
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    /**transform**/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /**变量**/
+    top:calc(50% - 50px);
+    left:calc(50% - 50px);
+    
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+```

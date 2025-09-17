@@ -11,6 +11,10 @@ module.exports = {
         text: '前端基础',
         items: [
           {
+            text:'HTML5',
+            link:'/BasisPage/html'
+          },
+          {
             text: 'JavaScript',
             link: '/BasisPage/Js'
           }, 
@@ -66,6 +70,13 @@ module.exports = {
           {
             text: '计算机网络',
             link: '/CNTPage/cnt'
+          },
+          {
+            text: '算法',
+            link: '/CNTPage/algorithm'
+          },          {
+            text: '数据结构',
+            link: '/CNTPage/dataStructure'
           }
         ]
       }

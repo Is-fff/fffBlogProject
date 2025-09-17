@@ -1,8 +1,8 @@
 ## 宏任务与微任务
 
-**宏任务**：(macro)task，可以理解是每次执行栈执行的代码就是一个宏任务（包括每次从事件队列中获取一个事件回调并放到执行栈中执行），主要包括：script(整体代码)、setTimeout、setInterval、XMLHttpRequest.prototype.onload、I/O、UI 渲染。
+**宏任务**：(macro)task，可以理解是每次执行栈执行的代码就是一个宏任务（包括每次从事件队列中获取一个事件回调并放到执行栈中执行），主要包括：script(整体代码)、setTimeout、setInterval、XMLHttpRequest.prototype.onload、I/O、UI 渲染。（由宿主发起的【Node/浏览器】）
 
-**微任务**：微任务（microtask）是宏任务中的一个部分，它的执行时机是在同步代码执行之后，下一个宏任务执行之前。主要包括：Promise、MutationObserver。
+**微任务**：微任务（microtask）是宏任务中的一个部分，它的执行时机是在同步代码执行之后，下一个宏任务执行之前。主要包括：Promise、MutationObserver。（由js发起的）
 
 ## 浏览器事件循环
 
@@ -164,7 +164,13 @@ async:异步加载异步执行，多个async不保证顺序执行，不保证在
 
 通过文本输入注入恶意脚本，随输入提交到服务器，服务器保存脚本信息，当用户获取服务器数据时就会执行恶意脚本，侵害用户信息
 
-解决：将cookie等敏感信息设置为HttpOnly，不允许通过document，js获取cookie，防止恶意脚本获取用户登陆信息。
+**解决**：
+
+1.将cookie等敏感信息设置为HttpOnly，不允许通过document，js获取cookie，防止恶意脚本获取用户登陆信息。
+
+2.采用CSP内容安全策略，限制浏览器加载资源的类型和来源
+
+3.输入检测过滤，内容转义
 
 ### **SQL注入**
 
@@ -191,7 +197,7 @@ SELECT * FROM user WHERE username='' and password='' OR '1'='1'//密码设置为
 
 攻击者使用一个多个的透明的iframe(嵌入式网页框架)覆盖在正常的网页上，诱导用户对该网页进行操作从而劫持用户的页面点击事件触发恶意回调或者进入恶意链接。
 
-解决：X-Frame-Options(一个http头部)，专门用来预防iframe攻击，deny,sameorigin,allow-from.
+解决：X-Frame-Options(一个http响应头部)，专门用来预防iframe攻击，deny,sameorigin,allow-from.
 
 ### **CSRF** (Cross-site request forgery，**跨站请求伪造**)
 
@@ -309,6 +315,52 @@ WebSocket和HTTP都是应用层协议，都基于 TCP 协议。但是 WebSocket 
 > 3. **WebSocket是需要浏览器和服务器握手进行建立连接的**
 > 4. **而http是浏览器发起向服务器的连接，服务器预先并不知道这个连接**，需要客户端主动发，服务端被动发，也就是一次请求，一次响应
 
+## 前端缓存
+
+### 分类(优先级高->优先级低)
+
+#### Service Worker
+
+Service Worker 借鉴了 Web Worker的 思路，即让 JS 运行在主线程之外，由于它脱离了浏览器的窗体，因此无法直接访问DOM。虽然如此，但它仍然能帮助我们完成很多有用的功能，比如离线缓存、消息推送和网络代理等功能。其中的离线缓存就是 Service Worker Cache。
+
+浏览器调试窗口：Application->Cache Storage
+
+#### Memory cache
+
+内存缓存，几乎所有的网络请求资源都会被浏览器自动加入到 memory cache 中。而如果极端情况下 (例如一个页面的缓存就占用了超级多的内存)，那可能在 TAB 没关闭之前，排在前面的缓存就已经失效了。设置Cache:no-store不缓存，页面关闭缓存清除。
+
+存取速度快，容量较小
+
+#### disk cache
+
+磁盘缓存，也叫Http缓存。磁盘缓存比内存缓存的存取速度慢。大文件一般都要放在磁盘缓存而不是内存缓存，通过请求头来指定
+
+存取速度较慢，容量较大
+
+**memory cache和disk cache统称强缓存**
+
+### 浏览器请求一个静态资源的完整流程：
+
+1. 调用 Service Worker 的 fetch 事件响应
+
+2. 查看 memory cache
+
+3. 查看 disk cache。这里又细分：
+
+4. 如果有强制缓存且未失效，则使用强制缓存，不请求服务器。这时的状态码全部是 200
+
+5. 如果有强制缓存但已失效，使用协商缓存，比较后确定 304 还是 200
+
+6. 发送网络请求，等待网络响应
+
+7. 把响应内容存入 disk cache (如果 HTTP 头信息配置可以存的话)
+
+8. 把响应内容的引用存入 memory cache (无视 HTTP 头信息的配置)
+
+9. 把响应内容存入 Service Worker 的 Cache Storage (如果 Service Worker 的脚本调用了 cache.put())
+   
+
+
 ## 强缓存、协商缓存、CDN缓存
 
 ### CDN的概念（Content Delivery Network）
@@ -318,13 +370,17 @@ CDN（内容分发网络）通过一组位于全球各地的服务器，将网�
 ### CDN的作用
 
 1. 加速网站加载速度：CDN会将网站的图片、视频和其他静态资源缓存在离用户更近的服务器上，这样用户在访问网站时可以从附近的服务器获取这些内容，从而加快网站加载速度。
-
 2. 减少网络延迟：由于用户能够从距离更近的服务器获取内容，CDN可以减少网络延迟，提高网站的响应速度，让用户能够更快地打开网页和浏览内容。
-
 3. 减轻服务器负载：部分用户的访问请求会被分配给CDN的服务器处理，这样可以减轻原始服务器的负载压力，提高服务器的性能和稳定性。
-
 4. 节省带宽成本：CDN可以减少网站跨地区传输的流量，降低网站的带宽成本，使网站运营更加经济高效。
 5. 提高安全性：CDN还有助于提高网站的安全性，能够抵御一些网络攻击，例如通过监控异常流量来防御DDoS攻击，以及通过全链路HTTPS通信来防范中间人攻击。
+
+### 加载流程
+
+1. 用户向本地DNS服务器发起DNS请求解析域名
+2. 配置了CDN的域名会解析出一个CName,DNS服务器将域名解析权交给CName指定的DNS域名服务器（重定向）
+3. DNS解析域名，返回全局负载均衡设备的IP给浏览器
+4. 浏览器向IP发起HTTP请求得到边缘节点的IP并与该节点通信取得内容
 
 ### 使用场景
 
@@ -419,9 +475,28 @@ Session是存储在服务器端的，其它都是客户端浏览器
 ###  传输数据
 
 Cookie：每次请求都会携带 Cookie 数据，影响性能。
-Session：仅在初始会话时传输 Session ID，后续请求不再携带全部会话数据。
+Session：仅在初始会话时传输 Session ID，后续请求不再携带全部会话数据。（当cookie被禁用时，可以使用url重写技术来传递sessionId）
 LocalStorage：不随请求发送，仅在客户端存储和访问。
 SessionStorage：不随请求发送，仅在客户端存储和访问。
+
+## LocalStorage和indexedDB
+
+### 同
+
+遵守同源策略，不同域的存储资源不共享
+
+### 异
+
+LocalStorage存储空间限制：5MB-10MB
+
+indexedDB存储空间限制：本地磁盘剩余空间的50%，也会由不同浏览器限制而不同。
+
+### indexedDB
+
+1. **键值型数据库**
+2. 面向Javascript对象，允许存储复杂的结构体对象
+3. 异步API，通常不是返回数据而是callback
+4. 自带transition事务，所有操作都会绑定特殊的事务上
 
 ## SPA
 
@@ -455,3 +530,138 @@ SPA是一种特殊的web应用。将**所有的活动局限于一个Web页面**�
 ### 解决首屏加载慢问题
 
 ![img](./img/white.png)
+
+## 浏览器内核
+
+浏览器内核主要分为两部分：渲染引擎和js引擎。
+
+### 渲染引擎
+
+负责加载处理HTML,CSS构建DOM树，CSSOM树并结合组成渲染树，计算网页显示方式，组织页面元素回流重绘，渲染网页呈现到浏览器上来。
+
+### js引擎
+
+解析和执行javascript脚本来实现网页的动态效果。 
+
+**不同内核对对网页的语法解释不同，所以渲染效果也可能不相同。**
+
+### 常见内核
+
+Trident:三叉戟内核，用于IE
+
+Webkit:源码结构清晰，渲染速度极快，用于Safari,Chrome(早期)
+
+Blink:在Webkit基础上修改优化,Chrome,Edge
+
+Gecko:用于FireFox
+
+## 前端监控
+
+### 捕获网络异常错误
+
+监听error事件
+
+```js
+//网络请求异常不会冒泡，必须设置在捕获阶段触发
+window.addEventListener('error', function(e) {
+  console.log('捕获', e)
+}, true) // 这里只有捕获才能触发事件，冒泡是不能触发
+```
+
+### 捕获未处理的Promise错误
+
+```js
+window.addEventListener('unhandledrejection', function(e) {
+  console.log('捕获为处理的Promise错误', e)
+}) 
+```
+
+### 捕获JS同步错误
+
+window.onerror
+
+```js
+window.onerror = function(message, source, lineno, colno, error) {
+    console.log('捕获到异常：',{message, source, lineno, colno, error});
+    return true;
+}
+```
+
+## 前端性能指标
+
+1. LCP(Largest Contentful Paint)最大内容绘制
+2. INP(Interaction to Next Paint)下一次交互的绘制
+3. CLS(Cumulative Layout Shift)累计布局偏移
+4. TTFB(Time to First Byte)首字节加载时间
+5. FCP(First Contentful Paint)首屏加载时间
+
+## 前端预加载
+
+### 概念
+
+在确认用户会使用/浏览到某个资源时，提前对该静态资源进行加载，提高首屏加载速度，减少屏幕闪白的频率，优化用户体验
+
+### 实现
+
+1.prefetch
+
+利用浏览器**空闲时间加载**资源并将其存储在缓存中，使用时在缓存获取
+<head> 
+    <!--低优先级预加载-->
+    <link rel="prefetch" href="static/img/ticket_bg.a5bb7c33.png">
+    <!--高优先级预加载-->
+    <link rel="subresource" href="styles.css">
+</head>
+
+2.preload
+
+声明当前页面的关键资源，**强制**浏览器**尽快**加载
+
+<head>
+    <link rel="preload" as="font" href="<%= require('/assets/fonts/AvenirNextLTPro-Demi.otf') %>" crossorigin>
+    <link rel="preload" as="font" href="<%= require('/assets/fonts/AvenirNextLTPro-Regular.otf') %>" crossorigin> 
+</head>
+
+3.WebPack插件**preload-webpack-plugin**
+
+```js
+plugins: [
+  new PreloadWebpackPlugin({
+    rel: 'preload'，
+    as(entry) {  //资源类型
+      if (/\.css$/.test(entry)) return 'style';
+      if (/\.woff$/.test(entry)) return 'font';
+      if (/\.png$/.test(entry)) return 'image';
+      return 'script';
+    },
+    include: 'asyncChunks', // preload模块范围，还可取值'initial'|'allChunks'|'allAssets',
+    fileBlacklist: [/\.svg/] // 资源黑名单
+    fileWhitelist: [/\.script/] // 资源白名单
+  })
+]
+```
+
+4.对WebPack异步加载的模块使用注释标记
+
+```js
+import(/* webpackPreload: true */ 'AsyncModule');
+```
+
+5.DNS预解析
+
+```js
+<link rel="dns-prefetch" href="//example.com">
+```
+
+6.图像预加载
+
+```html
+<img src="image.png" style="display:none"/>
+```
+
+```js
+<script src="./imagePreload.js"></script>
+// imagePreload.js文件
+var image= new Image()
+image.src="https://xxx.xx.com/image.jpg";//提前加载图片
+```

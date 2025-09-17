@@ -152,3 +152,115 @@ onBeforeUnmount()
 onUnmounted()
 
 //去掉了created和destroy
+
+## 父子组件生命周期
+
+父beforeCreate -> 父created -> 父beforeMount -> 子beforeCreate -> 子created -> 子beforeMount -> 子mounted -> 父mounted->父beforeUpdate->子beforeUpdate->子updated->父updated->父beforeDestroy->子beforeDestroy->子destroyed->父destroyed
+即：父组件可以单独被create,在挂载前才会去看是否有子组件，其它生命周期则从内向外更新。
+
+## 订阅发布模式和观察者模式
+
+### 订阅发布模式
+
+完成订阅发布流程需要三个角色：**订阅者，发布者，发布中心**
+
+流程：订阅者需要向事件中心订阅指定的事件 -> 发布者向事件中心发布指定事件内容 -> 事件中心通知订阅者 -> 订阅者收到消息
+
+代码实现，可以参考eventEmiter
+
+常见场景：事件处理机制
+
+**特点**：发布者和订阅者只关注事件本身，通过事件中心订阅/发布，不关注是谁发布/订阅，两者之间是**解耦**的
+
+**优点**：发布者订阅者互相解耦，更加灵活
+
+**缺点**：1.使用不当容易造成数据流混乱；2.需要维护事件队列，性能消耗大
+
+### 观察者模式
+
+完成观察者模式需要两个角色：**被观察者，观察者**
+
+**观察者模式**定义了一种一对多的依赖关系，让多个**观察者**对象同时监听某一个目标对象，当这个目标对象的状态发生变化时，会通知所有**观察者**对象，使它们能够自动更新。
+
+常见场景：vue2响应式，mobx响应式
+
+代码实现(vue2响应式实现)
+
+```js
+/**
+ * 观察监听一个对象成员的变化
+ * @param {Object} obj 观察的对象
+ * @param {String} targetVariable 观察的对象成员
+ * @param {Function} callback 目标变化触发的回调
+ */
+function observer(obj, targetVariable, callback) {
+  if (!obj.data) {
+    obj.data = {}
+  }
+  Object.defineProperty(obj, targetVariable, {
+    get() {
+      return this.data[targetVariable]
+    },
+    set(val) {//状态改变
+      this.data[targetVariable] = val
+      // 目标主动通知观察者
+      callback && callback(val)
+    },
+  })
+  if (obj.data[targetVariable]) {
+    callback && callback(obj.data[targetVariable])
+  }
+}
+```
+
+**特点**：观察者和被观察者是直接关联的，是耦合的
+
+**优点**：便于实现响应式，目标资源的改变会通知使用者
+
+**缺点**：两者相互耦合，使得这种方式不够灵活
+
+## Vue.nextTick
+
+### 作用
+
+在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。
+
+### 应用场景
+
+列表数据更新之后，获取列表组件的高度
+
+### 实现原理
+
+nextTick内部动态维护一个**callbacks数组**，并将这个回调数组放到异步队列里面依次执行，根据不同的浏览器支持，异步的实现方式Promise.then > MutationObserver > setImmediate > setTimeout。
+
+因此在标准浏览器中，nextTick通过Promise.resolve().then将回调数组放到微任务队列中执行
+
+### Vue2中响应式数据改变，发生了什么
+
+this.a = 2,触发了setter方法，通过dep.notify()，通知watcher更新视图，调用watcher.update()，采用queueWatcher去重，并将watcher.run放入nextTick**（nextTick(watcher.run)）**
+
+### 代码输出案例
+
+![img](img/outputTest.png)
+
+```js
+//2
+//nextTick 1
+//resolve 2
+```
+
+第四行执行nextTick，将回调放置在callbacks数组并置入微任务队列，此时微队列：[...callbacks]
+
+第七行将Promise回调置入微队列，此时微队列：[...callbacks,()=>{console.log(resolve)}]
+
+第十行修改a，执行watcher.update，将watcher.run放入nextTick的callbacks
+
+此时callbacks = [()=>{console.log(nextTick)},watcher.run]
+
+微任务队列：[...callback,()=>{console.log(resolve)}]
+
+## 为什么推荐使用ref而不用reactive
+
+1.reative只支持引用类型，而ref支持基本数据类型和引用类型，引用类型内部也是用reactive实现
+
+2。**重新分配新对象时，由于reactive返回的是Proxy对象引用，因此重新赋值对象会导致响应式丢失，而对ref.value重新赋值不会失去响应式**

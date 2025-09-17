@@ -210,7 +210,7 @@ Promise.try().then(()=>{})
    
    ```
 
-   
+   xxxxxxxxxx .father {    position: relative;    width: 200px;    height: 200px;    background: skyblue;}.son {    position: absolute;    /**margin负值**/    top: 50%;    left: 50%;    margin-left:-50px;    margin-top:-50px;    /**margin:auto**/    top:0;    left:0;    right:0;    bottom:0;    margin:auto;    /**transform**/    top: 50%;    left: 50%;    transform: translate(-50%,-50%);    /**变量**/    top:calc(50% - 50px);    left:calc(50% - 50px);        width: 100px;    height: 100px;    background: red;}css
 
 ## js模块化（commonjs/AMD/CMD/ES6）
 
