@@ -1,3 +1,9 @@
+---
+lang: zh-CN
+title: TypeScript
+description: TypeScript
+---
+
 ## type和interface的区别
 
 **type**:类型别名，用来给一个类型起新名字，使用 type 创建类型别名。**类型别名不仅可以用来表示基本类型，还可以用来表示对象类型、联合类型、元组和交集。**

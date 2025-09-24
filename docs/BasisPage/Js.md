@@ -1,3 +1,9 @@
+---
+lang: zh-CN
+title: JavaScript
+description: Javascript
+---
+
 ## 数据类型
 
 ### 基本数据类型

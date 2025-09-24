@@ -11,25 +11,25 @@ module.exports = {
         text: '前端基础',
         items: [
           {
-            text:'HTML5',
-            link:'/BasisPage/html'
+            text: 'HTML5',
+            link: '/BasisPage/html'
           },
           {
             text: 'JavaScript',
             link: '/BasisPage/Js'
-          }, 
+          },
           {
             text: 'CSS',
             link: '/BasisPage/css'
-          },        
+          },
           {
             text: 'ES6新特性',
             link: '/BasisPage/ES6'
-          },        
+          },
           {
             text: 'TypeScript',
             link: '/BasisPage/ts'
-          },        
+          },
           {
             text: '杂记',
             link: '/BasisPage/something'
@@ -38,14 +38,14 @@ module.exports = {
       },
       {
         text: 'Web前端框架',
-        items:[
+        items: [
           {
             text: '框架概述',
             link: '/FrameworkPage/index'
-          },{
+          }, {
             text: 'Vue框架概述',
             link: '/FrameworkPage/vue'
-          },{
+          }, {
             text: 'React框架概述',
             link: '/FrameworkPage/react'
           },
@@ -56,11 +56,11 @@ module.exports = {
         ]
       },
       {
-        text:'构建工具',
-        items:[
+        text: '构建工具',
+        items: [
           {
-            text:'webpack',
-            link:'/toolPage/webpack'
+            text: 'webpack',
+            link: '/toolPage/webpack'
           }
         ]
       },
@@ -70,7 +70,7 @@ module.exports = {
       },
       {
         text: '计算机系统',
-        items:[
+        items: [
           {
             text: '计算机网络',
             link: '/CNTPage/cnt'
@@ -78,7 +78,7 @@ module.exports = {
           {
             text: '算法',
             link: '/CNTPage/algorithm'
-          },          {
+          }, {
             text: '数据结构',
             link: '/CNTPage/dataStructure'
           }
@@ -86,10 +86,19 @@ module.exports = {
       },
       {
         text: 'AI学习',
-        items:[
+        items: [
           {
             text: "AI工具链接",
             link: '/AI_learn/aiTools'
+          }
+        ]
+      },
+      {
+        text: 'App端',
+        items: [
+          {
+            text: "Kotlin学习笔记",
+            link: '/AppPage/kotlinLearn'
           }
         ]
       }

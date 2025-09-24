@@ -1,4 +1,8 @@
-# React框架概述
+---
+lang: zh-CN
+title: React框架概述
+description: React框架
+---
 
 ## Hooks是什么
 

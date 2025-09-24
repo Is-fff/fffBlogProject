@@ -1,3 +1,9 @@
+---
+lang: zh-CN
+title: AI工具
+description: 常用AI工具整理
+---
+
 ## AI大模型
 
 ### 国外（需翻墙）

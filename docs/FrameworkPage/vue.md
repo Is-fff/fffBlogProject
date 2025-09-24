@@ -1,4 +1,8 @@
-# Vue框架概述
+---
+lang: zh-CN
+title: Vue框架概述
+description: Vue框架概述
+---
 
 ## Vue2和Vue3的区别
 

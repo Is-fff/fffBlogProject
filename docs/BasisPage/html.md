@@ -1,3 +1,9 @@
+---
+lang: zh-CN
+title: HTML特性记录
+description: HTML特性记录
+---
+
 ## HTML5十大新特性
 
 **1.语义化标签**

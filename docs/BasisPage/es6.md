@@ -1,4 +1,8 @@
-# ES6
+---
+lang: zh-CN
+title: ES6
+description: ES6特性学习
+---
 
 ## 新特性
 

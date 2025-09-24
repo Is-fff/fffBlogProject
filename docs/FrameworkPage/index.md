@@ -1,3 +1,9 @@
+---
+lang: zh-CN
+title: 前端框架概述
+description: 前端框架中的一些知识，主要是Web相关
+---
+
 ## 虚拟dom为什么快
 
 虚拟DOM的性能提升主要有以下几个方面：

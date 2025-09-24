@@ -1,4 +1,8 @@
-# React19新特性
+---
+lang: zh-CN
+title: React19新特性
+description: React19新特性
+---
 
 ## 并发渲染增强
 

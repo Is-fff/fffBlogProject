@@ -1,3 +1,9 @@
+---
+lang: zh-CN
+title: 浏览器相关
+description: 前端开发时浏览器相关特点
+---
+
 ## 宏任务与微任务
 
 **宏任务**：(macro)task，可以理解是每次执行栈执行的代码就是一个宏任务（包括每次从事件队列中获取一个事件回调并放到执行栈中执行），主要包括：script(整体代码)、setTimeout、setInterval、XMLHttpRequest.prototype.onload、I/O、UI 渲染。（由宿主发起的【Node/浏览器】）
