@@ -101,6 +101,15 @@ module.exports = {
             link: '/AppPage/kotlinLearn'
           }
         ]
+      },
+      {
+        text: '读书笔记',
+        items: [
+          {
+            text: "《重构》",
+            link: '/Books/refactor'
+          }
+        ]
       }
     ],
     sidebar: "auto"
